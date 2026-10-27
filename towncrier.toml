@@ -1,4 +1,10 @@
 [tool.towncrier]
+directory = "doc/changelog.d"
+template = "doc/changelog.d/changelog_template.jinja"
+filename = "CHANGELOG.md"
+start_string = "<!-- towncrier release notes start -->\n"
+title_format = "## [{version}](https://github.com/jorgepiloto/test-doc-changelog/releases/tag/v{version}) - {project_date}"
+issue_format = "[#{issue}](https://github.com/jorgepiloto/test-doc-changelog/pull/{issue})"
 
 [[tool.towncrier.type]]
 directory = "added"
