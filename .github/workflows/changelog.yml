@@ -18,6 +18,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           bot-user: github-actions[bot]
           bot-email: 41898282+github-actions[bot]@users.noreply.github.com
-          config-file: towncrier.toml
-          use-default-towncrier-config: true
+          use-default-towncrier-config: false
           use-ansys-default-template: false
