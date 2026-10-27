@@ -1,0 +1,23 @@
+name: Changelog
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+permissions: {}
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: ansys/actions/doc-changelog@fix/952-doc-changelog-config
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          bot-user: github-actions[bot]
+          bot-email: 41898282+github-actions[bot]@users.noreply.github.com
+          config-file: towncrier.toml
+          use-default-towncrier-config: true
+          use-ansys-default-template: false

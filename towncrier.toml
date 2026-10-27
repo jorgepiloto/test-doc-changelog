@@ -1,0 +1,6 @@
+[tool.towncrier]
+
+[[tool.towncrier.type]]
+directory = "added"
+name = "Added"
+showcontent = true
