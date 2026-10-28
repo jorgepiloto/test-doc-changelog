@@ -5,4 +5,50 @@ build-backend = "flit_core.buildapi"
 [project]
 name = "test-doc-changelog"
 version = "0.1.0"
-description = "Sandbox for validating the doc-changelog action with towncrier.toml."
+description = "Sandbox for validating the doc-changelog action."
+
+[tool.towncrier]
+directory = "doc/changelog.d-pyproject"
+template = "doc/changelog.d-pyproject/changelog_template.jinja"
+filename = "CHANGELOG.md"
+start_string = "<!-- towncrier release notes start -->\n"
+
+[[tool.towncrier.type]]
+directory = "breaking"
+name = "Breaking"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "added"
+name = "Added"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "fixed"
+name = "Fixed"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "documentation"
+name = "Documentation"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "dependencies"
+name = "Dependencies"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "maintenance"
+name = "Maintenance"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "miscellaneous"
+name = "Miscellaneous"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "test"
+name = "Test"
+showcontent = true
